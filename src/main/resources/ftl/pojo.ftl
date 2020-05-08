@@ -14,7 +14,7 @@ import javax.persistence.Id;
  * Created by Kim QQ.Cong on ${.now?string["yyyy-MM-dd"]} / ${.now?string["HH:mm:ss"]}
  *
  * @author: CongQingquan
- * @Description: 事项类型枚举
+ * @Description:
  */
 @Data
 @Builder
@@ -27,7 +27,8 @@ public class ${className} {
 <#list fieldList as field>
  <#-- 1. id -->
   <#if field.id?? && field.id == true>
-    @Id@GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
   </#if>
   <#-- 2. api model property -->
   <#if field.comment?? && field.comment != "">

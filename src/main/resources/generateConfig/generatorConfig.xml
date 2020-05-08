@@ -5,6 +5,10 @@
 <generatorConfiguration>
 
   <context id="Mysql" targetRuntime="MyBatis3">
+
+    <!-- 生成文件使用的编码格式 -->
+    <property name="javaFileEncoding" value="UTF-8"></property>
+
     <!-- 1. 引入Mapper生成器插件 -->
     <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
       <property name="mappers" value="tk.mybatis.mapper.common.Mapper"/>
@@ -35,8 +39,67 @@
       type="XMLMAPPER"/>
 
     <!-- 要生成的表 tableName是数据库中的表名或视图名 domainObjectName是实体类名-->
-    <table tableName="i18n_compliance_survey_attachment"
-      domainObjectName="I18nComplianceSurveyAttachment"
+    <!--<table tableName="kri"-->
+      <!--domainObjectName="Kri"-->
+      <!--enableCountByExample="false" enableUpdateByExample="false"-->
+      <!--enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true"/>-->
+
+    <!--<table tableName="kri_business_flow"-->
+      <!--domainObjectName="KriBusinessFlow"-->
+      <!--enableCountByExample="false" enableUpdateByExample="false"-->
+      <!--enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true"/>-->
+
+    <!--<table tableName="kri_business_flow_relation"-->
+      <!--domainObjectName="KriBusinessFlowRelation"-->
+      <!--enableCountByExample="false" enableUpdateByExample="false"-->
+      <!--enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true"/>-->
+
+    <!--<table tableName="kri_business_flow_risk_info"-->
+      <!--domainObjectName="KriBusinessFlowRiskInfo"-->
+      <!--enableCountByExample="false" enableUpdateByExample="false"-->
+      <!--enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true"/>-->
+
+
+    <!--<table tableName="kri_business_flow_risk_relation"-->
+      <!--domainObjectName="KriBusinessFlowRiskRelation"-->
+      <!--enableCountByExample="false" enableUpdateByExample="false"-->
+      <!--enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true"/>-->
+
+
+    <!--<table tableName="kri_indicator_value"-->
+      <!--domainObjectName="KriIndicatorValue"-->
+      <!--enableCountByExample="false" enableUpdateByExample="false"-->
+      <!--enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true"/>-->
+
+    <!--<table tableName="kri_interval_configuration"-->
+      <!--domainObjectName="KriIntervalConfiguration"-->
+      <!--enableCountByExample="false" enableUpdateByExample="false"-->
+      <!--enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true"/>-->
+
+
+    <!--<table tableName="kri_operating_log"-->
+      <!--domainObjectName="KriOperatingLog"-->
+      <!--enableCountByExample="false" enableUpdateByExample="false"-->
+      <!--enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true"/>-->
+
+
+    <!--<table tableName="kri_related_dept"-->
+      <!--domainObjectName="KriRelatedDept"-->
+      <!--enableCountByExample="false" enableUpdateByExample="false"-->
+      <!--enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true"/>-->
+
+    <!--<table tableName="kri_related_text_field"-->
+      <!--domainObjectName="KriRelatedTextField"-->
+      <!--enableCountByExample="false" enableUpdateByExample="false"-->
+      <!--enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true"/>-->
+
+    <!--<table tableName="kri_responsible_person_operation_record"-->
+      <!--domainObjectName="KriResponsiblePersonOperationRecord"-->
+      <!--enableCountByExample="false" enableUpdateByExample="false"-->
+      <!--enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true"/>-->
+
+    <table tableName="kri_custom_indicator_value"
+      domainObjectName="KriCustomIndicatorValue"
       enableCountByExample="false" enableUpdateByExample="false"
       enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true"/>
   </context>

@@ -4,6 +4,7 @@ import com.linkinstars.autocoding.model.CommonResponse;
 import com.linkinstars.autocoding.util.ResolveSqlUtil;
 import com.linkinstars.autocoding.util.StaticPath;
 import com.linkinstars.autocoding.util.ZipUtil;
+import java.nio.charset.Charset;
 import org.apache.commons.io.IOUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
@@ -61,8 +62,10 @@ public class Sql2PojoController {
             return CommonResponse.fail("sql为空");
         }
 
+        // TODO: 修复源码BUG, 读取SQL文件没有指定编码集,　
+        // TODO: Charset.defaultCharset()返回并不一定是UTF8, 根据VM读取的OS系统属性而获取的file.encoding而定!
         //将sql文件读取出来一行行处理
-        List<String> readLines = IOUtils.readLines(sqlFile.getInputStream());
+        List<String> readLines = IOUtils.readLines(sqlFile.getInputStream(), Charset.forName("UTF-8"));
         
         List<String> javaClassNameList = new ArrayList<>();
         
