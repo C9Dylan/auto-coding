@@ -34,6 +34,10 @@ configurations {
 }
 
 dependencies {
+
+    implementation 'org.projectlombok:lombok:1.18.8'
+    annotationProcessor 'org.projectlombok:lombok:1.18.8'
+
     compile('org.springframework.boot:spring-boot-starter-web')
     compile('org.springframework.boot:spring-boot-starter-thymeleaf')
     compile group: 'net.sourceforge.nekohtml', name: 'nekohtml', version: '1.9.22'
@@ -70,6 +74,11 @@ dependencies {
     mybatisGenerator 'org.mybatis.generator:mybatis-generator-core:1.3.2'
     mybatisGenerator 'mysql:mysql-connector-java:5.1.46'
     mybatisGenerator 'tk.mybatis:mapper:4.0.4'
+
+    // mybatis plus
+    compile group: 'com.baomidou', name: 'mybatis-plus-boot-starter', version: '3.3.0'
+    compile group: 'com.baomidou', name: 'mybatis-plus-generator', version: '3.3.0'
+    compile group: 'org.apache.velocity', name: 'velocity', version: '1.7'
 }
 
 // mapper generate: 3. 添加任务
